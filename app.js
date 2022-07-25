@@ -9,7 +9,6 @@ app.use(cors())
 app.use(bodyParser.json())
   
 //Routes
-
 app.post("/api/products", (req, res) => {
     const product = req.body
     res.send({ product : req.body })

@@ -50,7 +50,15 @@ server.on('listening', () => {
 server.listen(port);
 
 
+//Mongoose 
+const mongoose = require("mongoose");
+const password = "1234";
+const userName = "test";
+const uri = `mongodb+srv://${userName}:${password}@cluster0.fhwrtpi.mongodb.net/test?retryWrites=true&w=majority`
 
+mongoose.connect(uri)
+.then(()=>console.log("Connected to Mongo cluster"))
+.catch((err)=> console.error(err))
 
 
 
