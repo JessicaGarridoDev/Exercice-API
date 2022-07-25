@@ -1,10 +1,12 @@
 // Application Express 
 const express = require('express');
-
 const app = express();
+const cors = require("cors");
 
 //Middlewwares
+app.use(cors())
 
+//Routes
 //enregistre « Requête reçue ! » dans la console et passe l'exécution
 app.use((req, res, next) => {
   console.log('Requête reçue !');
